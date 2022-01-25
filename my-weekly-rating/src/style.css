@@ -67,11 +67,11 @@
     margin-right: 10px;
 }
 
-.circle {
+.circle_main {
     width: 32px;
     height: 32px;
     margin: auto 7px;
-    background-color:#C3B3B1;
+    background-color: #C3B3B1;
     border-radius: 32px;
 }
 
@@ -84,5 +84,20 @@
     margin: auto;
     display: block;
   }
+
+  .circle-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .circle_review {
+    width: 32px;
+    height: 32px;
+    margin: auto 3px 10px;
+    background-color:#C3B3B1;
+    border-radius: 32px;
+    display: inline-flex;
+}
 
 /* 동그라미 색변환시 #918280 색으로 */
