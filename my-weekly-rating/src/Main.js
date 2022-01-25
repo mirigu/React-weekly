@@ -4,35 +4,35 @@ import Review from "./Review";
 
 const Main = (props) => {
     let history = useHistory();
-    let days = ["월", "화", "수", "목", "금", "토","일"]
+    const days = ["월", "화", "수", "목", "금", "토","일"]
 
-    const random_days = days.map((day, index) => {
+    const random_circle = days.map((d, index) => {
         return {
-            day: day,
-            rate: Math.floor(Math.random()*(5-0)+0)
+            day: d,
+            rate: Math.floor(Math.random() * ( 5 - 1 + 1) + 1),
+            //랜덤 구하는 식(최대,최소값 포함) = Math.floor(Math.random() * (max - min + 1)) + min
         } 
     })
-    console.log(random_days)
+    console.log(random_circle)
 
     return (
         <div className="Main">
             <div className="container">
                 <h2>나의 일주일 평점은?</h2>
-                {days.map((day, index) => {
-                    console.log(day)
+                {random_circle.map((d, index) => {
                     return(
                         <div className="day-list" key = {index}>
                             <div className="day">
-                                <p>{day}</p>
+                                <p>{d.day}</p>
                             </div>
-                            {Array.from({ length: 5 }, (circle_main, index) => {
+                            {Array.from({ length: 5 }, (circle, index) => {
                                 return (
-                                    <div  className="circle_main" key = {index} >
+                                    <div  className="circle_main" key = {index} style = {{backgroundColor: d.rate < index ? "#C3B3B1" : "#918280"}} >
                                     </div>
                                 )
                             })}
-                            <div className="triangle"onClick={() => {
-                                history.push(`/Review/${day}`)
+                            <div className="triangle" onClick={() => {
+                                history.push(`/Review/${d.day}`)
                             }}>
                             </div>
                         </div>
