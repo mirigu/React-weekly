@@ -3,10 +3,6 @@
 ## 개발 기간  
 2022.01.21 - 2022.01.27  
 
-## 사용 기술 스택  
-![JS](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=fff&fontColor=fff)
-![JS](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=fff&fontColor=fff)
-
 ## 기능
 ✨ 메인 페이지
 - [X] 일주일 평점 보여주기 (평점은 1~5까지 숫자 중 랜덤하게 표현) 
